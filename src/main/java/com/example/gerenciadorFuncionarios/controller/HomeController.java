@@ -18,7 +18,8 @@ public class HomeController {
 	@Autowired
 	private FuncionarioRepository funcionarioRepository;
 	
-	@GetMapping("/home")public String home(Model model) {
+	@GetMapping("/home")
+	public String home(Model model) {
 		List<Funcionario> funcionarios = funcionarioRepository.findAll();
 		model.addAttribute("funcionarios", funcionarios);
 		return "home";
