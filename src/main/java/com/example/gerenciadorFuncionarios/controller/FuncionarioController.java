@@ -31,8 +31,9 @@ public class FuncionarioController {
 		if(result.hasFieldErrors()) {
 			return "redirect:/form";
 		}
-		
+		System.out.println("TESTE 1 ----------->>> " + funcionario.getId());
 		funcionarioRepository.save(funcionario);
+		System.out.println("TESTE 2 ----------->>> " + funcionario.getId());
 		
 		return "redirect:/home";
 	}
